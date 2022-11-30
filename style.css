@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* padding: 0 10%; */
+  font-family: Poppins;
+}
+
+header {
+  position: relative;
+  color: #fff;
+  height: 750px;
+}
+
+.nav-container {
+  padding: 0 10%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  display: flex;
+  padding: 7px 0;
+  align-items: center;
+}
+
+.physicals {
+  margin-right: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.socials--links {
+  padding: 0 10px;
+}
+
+.nav {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav--logo {
+  width: 50px;
+}
+
+.nav--item {
+  float: left;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.nav--link {
+  text-decoration: none;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav--link:hover {
+  background-color: rgb(13, 13, 122);
+  color: white;
+}
+
+.nav--cta {
+  background-color: rgb(13, 13, 122);
+  color: white;
+  border-radius: 7px;
+  text-decoration: none;
+  padding: 7px 12px;
+  transition: all 0.3s;
+}
+
+.nav--cta:hover {
+  background-color: #eee;
+  color: rgb(13, 13, 122);
+}
+
+.hamburger-logo {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  row-gap: 6px;
+  width: 15%;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.hamb-div {
+  height: 5px;
+  background-color: #fff;
+  width: 35px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.change .hamb-div-1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .hamb-div-2 {
+  opacity: 0;
+}
+
+.change .hamb-div-3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -3;
+  overflow: hidden;
+  height: 100vh;
+  background-color: gray;
+}
+
+.slide-item {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1.5s;
+}
+
+.slide-item img {
+  /* height: 100vh; */
+  width: 100%;
+  transition: all 5s;
+}
+
+.title-container,
+.mission-container {
+  position: absolute;
+  padding: 15px 30px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+}
+
+.title-container {
+  top: 70%;
+  left: 3%;
+}
+
+.mission-container {
+  right: 0;
+  top: 40%;
+}
+
+.vision-disp {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1110px) {
+  .nav-container {
+    padding: 0 10%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .hero {
+    /* position: relative; */
+    height: auto;
+  }
+  .slides {
+    height: 100vh;
+  }
+
+  .slide-item img {
+    height: 100vh;
+    /* width: auto; */
+    object-fit: cover;
+    object-position: 45% 100%;
+  }
+}
+
+@media screen and (max-width: 914px) {
+  .contact,
+  header hr,
+  .nav {
+    display: none;
+  }
+
+  .hamburger-logo {
+    display: block;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* left: 95%; */
+  }
+}
+
+@media screen and (max-width: 478px) {
+  header,
+  .hero {
+    height: 100vh;
+  }
+
+  .title-container,
+  .mission-container {
+    bottom: 0;
+    left: unset;
+    top: unset;
+    width: 100%;
+    border-radius: unset;
+    padding: 40px 30px;
+  }
+
+  .title-container h1,
+  .mission-container h1 {
+    color: #eee;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .title-container p,
+  .mission-container p {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/*////////////////////////////////////////*/
+/* ABOUT PAGE */
+
+.about-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("./assets/images/gray-abstract-wireframe-technology-background.jpg");
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  padding: 0 15%;
+  align-items: center;
+}
+
+.about-main h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.about-main img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.about-images {
+  display: flex;
+  flex: 50%;
+  gap: 15px;
+  justify-self: flex-end;
+  height: 400px;
+}
+
+.about-1-img {
+  display: flex;
+  align-items: center;
+  flex: 50%;
+  justify-content: flex-end;
+}
+
+.about-img-1,
+.about-img-2,
+.about-img-3 {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-img-1 {
+  height: 60%;
+  width: 80%;
+  background-image: url(./assets/images/DSC_3925.jpg);
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.about-img-2,
+.about-img-3 {
+  height: 100%;
+  background-color: #555;
+  margin: 5px 0;
+  width: 80%;
+  border-radius: 20px;
+}
+
+.about-2-images {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  flex: 45%;
+  justify-self: flex-start;
+}
